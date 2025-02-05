@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sp23c.MidExamSceneController">
+   <children>
+      <TextField fx:id="valTextField" layoutX="101.0" layoutY="47.0" prefHeight="25.0" prefWidth="82.0" />
+      <Label layoutX="14.0" layoutY="51.0" text="Enter Element: " />
+      <Button layoutX="14.0" layoutY="86.0" mnemonicParsing="false" onAction="#addElementToValList" prefHeight="46.0" prefWidth="173.0" text="Add element to valList" />
+      <Button layoutX="214.0" layoutY="28.0" mnemonicParsing="false" onAction="#instantiateArr1AndClearValListButtonOnClick" prefHeight="46.0" prefWidth="185.0" text="Use valList to create MyArray instance arr 1, and clear valList" wrapText="true" />
+      <Button layoutX="214.0" layoutY="86.0" mnemonicParsing="false" onAction="#instantiateArr2AndClearValListButtonOnClick" prefHeight="46.0" prefWidth="185.0" text="Use valList to create MyArray instance arr2, and clear valList" wrapText="true" />
+      <Button layoutX="413.0" layoutY="26.0" mnemonicParsing="false" onAction="#mergeAndShowButtonOnClick" prefHeight="104.0" prefWidth="173.0" text="Merge arr1 and arr2 and show results" wrapText="true" />
+      <Label fx:id="postProcessingResultLabel" layoutX="17.0" layoutY="152.0" prefHeight="148.0" prefWidth="571.0" />
+   </children>
+</AnchorPane>

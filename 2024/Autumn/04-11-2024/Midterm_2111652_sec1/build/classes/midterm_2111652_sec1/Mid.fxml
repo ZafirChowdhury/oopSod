@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="midterm_2111652_sec1.MidController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Select Intern ID to Train: " />
+      <Label layoutX="14.0" layoutY="39.0" text="Selected Intern Name: " />
+      <Label layoutX="14.0" layoutY="64.0" text="University Name:" />
+      <Label layoutX="14.0" layoutY="88.0" text="Intership Payment Status: " />
+      <ComboBox fx:id="idComboBox" layoutX="216.0" layoutY="9.0" onAction="#showInternData" prefWidth="150.0" />
+      <Label fx:id="internName" layoutX="216.0" layoutY="39.0" prefHeight="16.0" prefWidth="150.0" />
+      <Label fx:id="uniName" layoutX="216.0" layoutY="64.0" prefHeight="16.0" prefWidth="150.0" />
+      <Label fx:id="satus" layoutX="216.0" layoutY="88.0" prefHeight="16.0" prefWidth="142.0" />
+      <Label layoutX="417.0" layoutY="14.0" text="Select Traning Type:" />
+      <CheckBox fx:id="springBootCheckbox" layoutX="416.0" layoutY="38.0" mnemonicParsing="false" text="Spring Boot" />
+      <CheckBox fx:id="blockChainCheckbox" layoutX="416.0" layoutY="63.0" mnemonicParsing="false" text="Block Chain" />
+      <CheckBox fx:id="communicationSkillCheckbox" layoutX="527.0" layoutY="38.0" mnemonicParsing="false" text="Communication Skill" />
+      <CheckBox fx:id="cudaCheckbox" layoutX="527.0" layoutY="63.0" mnemonicParsing="false" text="CUDA Multicore Programming" />
+      <Button layoutX="808.0" layoutY="17.0" mnemonicParsing="false" onAction="#showTraningInfoButtonMouseOnClicked" prefHeight="116.0" prefWidth="90.0" text="Show Traning info tp Table Below" wrapText="true" />
+      <TableView fx:id="table" layoutX="27.0" layoutY="153.0" prefHeight="200.0" prefWidth="866.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="uniCol" prefWidth="106.0" text="Uni Name" />
+            <TableColumn fx:id="paidCol" prefWidth="104.0" text="Paid Intern?" />
+            <TableColumn fx:id="skillCol" prefWidth="469.0" text="Training Selected For" />
+            <TableColumn fx:id="noOfSkillCol" prefWidth="111.0" text="No of Traning" />
+        </columns>
+      </TableView>
+      <Button layoutX="14.0" layoutY="117.0" mnemonicParsing="false" onAction="#addNewTraineeButtonMouseOnClicked" prefHeight="26.0" prefWidth="340.0" text="Add a Trainee Instance to traineeList" />
+      <Label fx:id="errorLable" layoutX="399.0" layoutY="122.0" prefHeight="16.0" prefWidth="365.0" />
+   </children>
+</AnchorPane>
