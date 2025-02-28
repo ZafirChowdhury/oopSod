@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="290.0" prefWidth="372.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentobject.MainController">
+   <children>
+      <TextField fx:id="idTextField" layoutX="69.0" layoutY="22.0" />
+      <TextField fx:id="nameTextField" layoutX="69.0" layoutY="66.0" />
+      <Label layoutX="24.0" layoutY="26.0" text="ID:" />
+      <Label layoutX="20.0" layoutY="70.0" text="Name: " />
+      <Label fx:id="outputLable" layoutX="19.0" layoutY="220.0" text="Output:" />
+      <Button layoutX="248.0" layoutY="22.0" mnemonicParsing="false" onAction="#showOutputOnAction" text="Show Output" />
+      <Label layoutX="22.0" layoutY="121.0" text="Major:" />
+      <ComboBox fx:id="majorComboBox" layoutX="69.0" layoutY="117.0" prefWidth="150.0" />
+      <RadioButton fx:id="maleRadioButton" layoutX="81.0" layoutY="156.0" mnemonicParsing="false" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="genderToggleGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <Label layoutX="18.0" layoutY="156.0" text="Gender:" />
+      <RadioButton fx:id="femaleRadioButton" layoutX="137.0" layoutY="156.0" mnemonicParsing="false" text="Female" toggleGroup="$genderToggleGroup" />
+      <RadioButton fx:id="otherRadioButton" layoutX="203.0" layoutY="156.0" mnemonicParsing="false" text="Other" toggleGroup="$genderToggleGroup" />
+      <Label layoutX="13.0" layoutY="190.0" text="Has Scholership:" />
+      <CheckBox fx:id="scholarshipCheckBox" layoutX="110.0" layoutY="190.0" mnemonicParsing="false" text="Yes" />
+   </children>
+</AnchorPane>
