@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sstutorial.S2Controller">
+   <children>
+      <Label layoutX="170.0" layoutY="166.0" prefHeight="69.0" prefWidth="260.0" text="This is scene 2">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <Button layoutX="545.0" layoutY="361.0" mnemonicParsing="false" onAction="#backButtonOnClick" text="Back" />
+      <Button layoutX="144.0" layoutY="308.0" mnemonicParsing="false" onAction="#viewDataOnClick" text="View Passed Data" />
+      <Label fx:id="outputLable" layoutX="416.0" layoutY="266.0" prefHeight="17.0" prefWidth="176.0" />
+   </children>
+</AnchorPane>
