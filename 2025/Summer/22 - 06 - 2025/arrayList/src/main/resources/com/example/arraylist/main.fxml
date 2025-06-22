@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="329.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.arraylist.MainController">
+   <children>
+      <TextField fx:id="idTextField" layoutX="89.0" layoutY="34.0" />
+      <TextField fx:id="nameTextField" layoutX="90.0" layoutY="72.0" />
+      <Label layoutX="31.0" layoutY="38.0" text="ID: " />
+      <Label layoutX="30.0" layoutY="76.0" text="Name: " />
+      <Button layoutX="85.0" layoutY="173.0" mnemonicParsing="false" onAction="#addStudentToArrayList" text="Add Student to ArrayList" />
+      <Button layoutX="72.0" layoutY="207.0" mnemonicParsing="false" onAction="#printAllStudentsFromArrayList" text="Print All students from ArrayList" />
+      <TextField fx:id="majorTextField" layoutX="90.0" layoutY="111.0" />
+      <Label layoutX="23.0" layoutY="115.0" text="Major:" />
+      <Button layoutX="86.0" layoutY="245.0" mnemonicParsing="false" onAction="#showOnlyMajorStudentsOnClick" text="Show only CSE Students" />
+   </children>
+</AnchorPane>
