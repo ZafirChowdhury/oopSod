@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sceneswitchingtest.SecondController">
+   <children>
+      <Label layoutX="134.0" layoutY="81.0" text="2nd FXML || Scene 2">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+      <Button layoutX="372.0" layoutY="283.0" mnemonicParsing="false" onAction="#backuttonOnClick" prefHeight="70.0" prefWidth="173.0" text="Back" />
+      <Label fx:id="outputLable" layoutX="146.0" layoutY="200.0" prefHeight="51.0" prefWidth="134.0" />
+   </children>
+</AnchorPane>
