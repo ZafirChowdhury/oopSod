@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="362.0" prefWidth="497.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sceneswitchingdemo.StudentDashbordController">
+   <children>
+      <Button layoutX="381.0" layoutY="63.0" mnemonicParsing="false" onAction="#showTranscriptOnClick" text="Show Transcrip" />
+      <Button layoutX="381.0" layoutY="28.0" mnemonicParsing="false" onAction="#registarationButtonOnClick" prefHeight="25.0" prefWidth="97.0" text="Registaration" />
+      <Label fx:id="studentInfoLable" layoutX="82.0" layoutY="135.0" prefHeight="128.0" prefWidth="334.0" wrapText="true">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
