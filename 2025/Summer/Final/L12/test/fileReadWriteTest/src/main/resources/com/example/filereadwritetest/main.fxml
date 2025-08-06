@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.filereadwritetest.MainController">
+   <children>
+      <TextField fx:id="nameTextField" layoutX="66.0" layoutY="38.0" promptText="name" />
+      <TextField fx:id="idTextFied" layoutX="66.0" layoutY="75.0" promptText="id" />
+      <Button layoutX="66.0" layoutY="110.0" mnemonicParsing="false" onAction="#sameButtonOnClick" text="Save" />
+      <Button layoutX="170.0" layoutY="110.0" mnemonicParsing="false" onAction="#showButtonOnCllick" text="Show" />
+      <Label fx:id="outputLable" layoutX="215.0" layoutY="307.0" prefHeight="59.0" prefWidth="187.0" />
+      <TableView fx:id="table" layoutX="34.0" layoutY="159.0" prefHeight="200.0" prefWidth="530.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="138.0" text="ID" />
+          <TableColumn fx:id="nameCol" prefWidth="391.0" text="Name" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
