@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<AnchorPane prefHeight="400.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.midterm_section1_1111111.MidController">
+   <children>
+      <TextField fx:id="pakageNameTextField" layoutX="123.0" layoutY="28.0" />
+      <TextField fx:id="dataAmountTextField" layoutX="123.0" layoutY="64.0" />
+      <TextField fx:id="priceTextField" layoutX="123.0" layoutY="136.0" />
+      <ComboBox fx:id="validityComboBox" layoutX="123.0" layoutY="103.0" prefWidth="150.0" />
+      <ComboBox fx:id="avvailabilityComboBox" layoutX="123.0" layoutY="168.0" prefWidth="150.0" />
+      <DatePicker fx:id="offerEndsDatePicker" layoutX="111.0" layoutY="204.0" />
+      <Label layoutX="29.0" layoutY="32.0" text="Pakage Name: " />
+      <Label layoutX="29.0" layoutY="68.0" text="Data Amount:" />
+      <Label layoutX="29.0" layoutY="107.0" text="Validity:" />
+      <Label layoutX="36.0" layoutY="140.0" text="Price:" />
+      <Label layoutX="36.0" layoutY="172.0" text="Availability:" />
+      <Label layoutX="22.0" layoutY="208.0" text="Offer Ends:" />
+      <Button layoutX="123.0" layoutY="236.0" mnemonicParsing="false" onAction="#createPakageOnClick" text="Create Package" />
+      <Label fx:id="outputLable" layoutX="37.0" layoutY="295.0" prefHeight="75.0" prefWidth="250.0" wrapText="true" />
+      <TableView fx:id="dataPakageTable" layoutX="311.0" layoutY="24.0" prefHeight="224.0" prefWidth="627.0">
+        <columns>
+          <TableColumn fx:id="pakageNameCol" prefWidth="123.0" text="Pakage Name" />
+          <TableColumn fx:id="dataAmountCol" prefWidth="102.0" text="Data Amount" />
+            <TableColumn fx:id="validityCol" prefWidth="75.0" text="Validity" />
+            <TableColumn fx:id="priceCol" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="availabilityCol" prefWidth="113.0" text="Availability" />
+            <TableColumn fx:id="offerEndsCol" prefWidth="138.0" text="Offer Ends " />
+        </columns>
+      </TableView>
+      <Button layoutX="227.0" layoutY="237.0" mnemonicParsing="false" onAction="#restFilterOnClick" text="Reset Filter" />
+      <Line endX="-17.0" endY="97.0" layoutX="350.0" layoutY="295.0" startX="-17.0" startY="-33.0" />
+      <Label layoutX="412.0" layoutY="254.0" text="Filtering" />
+      <Label layoutX="346.0" layoutY="287.0" text="Validity:" />
+      <Label layoutX="346.0" layoutY="328.0" text="Max Price:" />
+      <ComboBox fx:id="validityFilterComboBox" layoutX="412.0" layoutY="283.0" prefWidth="150.0" />
+      <TextField fx:id="maxPriceFilterTextFiled" layoutX="413.0" layoutY="324.0" />
+      <Button layoutX="508.0" layoutY="358.0" mnemonicParsing="false" onAction="#filterButtonOnClick" prefHeight="25.0" prefWidth="54.0" text="Filter" />
+      <Button layoutX="599.0" layoutY="283.0" mnemonicParsing="false" onAction="#findBestValuePakageOnClick" prefHeight="101.0" prefWidth="188.0" text="Fined best value pakage" />
+      <Button layoutX="817.0" layoutY="283.0" mnemonicParsing="false" onAction="#showDataInDetail" prefHeight="25.0" prefWidth="126.0" text="Show Data In Detail" />
+   </children>
+</AnchorPane>
