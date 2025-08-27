@@ -55,6 +55,8 @@ public class DataCreationProcessing1234567Controller
 
     @javafx.fxml.FXML
     public void loadDataToTable(ActionEvent actionEvent) throws IOException {
+        filteredPharmacies.clear();
+
         File file = new File("Chair.bin");
         if (!file.exists()) {
             return;
@@ -67,7 +69,9 @@ public class DataCreationProcessing1234567Controller
 
         try {
             while (true) {
-                pharmacies.add((Pharmacy) ois.readObject());
+                Pharmacy pharmacy = (Pharmacy) ois.readObject();
+                System.out.println(pharmacy.toString());
+                pharmacies.add(pharmacy);
             }
         } catch (EOFException efo) {
             System.out.println("End of file reached!");
@@ -80,12 +84,17 @@ public class DataCreationProcessing1234567Controller
 
         System.out.println("Filtering...");
         for (Pharmacy pharmacy : pharmacies) {
-            if ((pharmacy.getZipCode() == zipCode) && (pharmacy.getAreaInSqFt() <= area)) {
-                filteredPharmacies.add(pharmacy);
+            System.out.println(pharmacy.getAreaInSqFt());
+            if ((pharmacy.getZipCode().equals(zipCode))) {
+                System.out.println(pharmacy.getAreaInSqFt());
+                System.out.println(area);
+                if (pharmacy.getAreaInSqFt() <= area) {
+                    filteredPharmacies.add(pharmacy);
+                }
             }
         }
 
         tableView.getItems().clear();
-        tableView.getItems().addAll(pharmacies);
+        tableView.getItems().addAll(filteredPharmacies);
     }
 }

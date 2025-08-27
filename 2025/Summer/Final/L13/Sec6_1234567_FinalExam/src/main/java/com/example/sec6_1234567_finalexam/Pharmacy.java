@@ -71,6 +71,7 @@ public class Pharmacy extends Shop implements Serializable {
     @Override
     public String toString() {
         return "Pharmacy{" +
+                "area=" + this.getAreaInSqFt() +
                 "owner='" + owner + '\'' +
                 ", openingDate=" + openingDate +
                 ", locationType='" + locationType + '\'' +
