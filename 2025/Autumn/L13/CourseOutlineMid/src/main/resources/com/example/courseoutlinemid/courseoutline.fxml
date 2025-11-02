@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseoutlinemid.CourseoutlineController">
+   <children>
+      <Label layoutX="32.0" layoutY="17.0" text="course Id" />
+      <Label layoutX="28.0" layoutY="48.0" text="course title" />
+      <Label layoutX="18.0" layoutY="81.0" text="preR1" />
+      <Label layoutX="14.0" layoutY="110.0" text="preR2" />
+      <Label layoutX="18.0" layoutY="143.0" text="preR3" />
+      <Label layoutX="16.0" layoutY="182.0" text="no of credits" />
+      <Label layoutX="44.0" layoutY="209.0" text="year" />
+      <Label layoutX="25.0" layoutY="233.0" text="semester" />
+      <Label layoutX="24.0" layoutY="279.0" text="descrription" />
+      <Label layoutX="18.0" layoutY="288.0" />
+      <TextField fx:id="courseIdTextFiled" layoutX="87.0" layoutY="13.0" prefHeight="25.0" prefWidth="73.0" />
+      <TextField fx:id="courseTitleTextField" layoutX="102.0" layoutY="44.0" prefHeight="25.0" prefWidth="73.0" />
+      <ComboBox fx:id="preR1ComboBox" layoutX="57.0" layoutY="77.0" prefHeight="25.0" prefWidth="67.0" />
+      <ComboBox fx:id="preR2ComboBox" layoutX="57.0" layoutY="106.0" prefHeight="25.0" prefWidth="67.0" />
+      <ComboBox fx:id="preRComboBox" layoutX="66.0" layoutY="139.0" prefHeight="25.0" prefWidth="73.0" />
+      <TextField fx:id="noOfCreditsTextField" layoutX="86.0" layoutY="178.0" />
+      <TextField fx:id="yearTextField" layoutX="81.0" layoutY="205.0" />
+      <ComboBox fx:id="semesterComboBox" layoutX="81.0" layoutY="229.0" prefWidth="150.0" />
+      <TextArea fx:id="descriptionTextArea" layoutX="87.0" layoutY="265.0" prefHeight="35.0" prefWidth="150.0" />
+      <Button layoutX="26.0" layoutY="312.0" mnemonicParsing="false" text=" Club Election Form" />
+      <Button layoutX="23.0" layoutY="344.0" mnemonicParsing="false" onAction="#validateAndAddNewCourseOutlineButton" text="Validate and Add New CourseOutline to ArrayList" />
+      <TableView fx:id="courseOutlineTableView" layoutX="181.0" layoutY="19.0" prefHeight="119.0" prefWidth="401.0">
+        <columns>
+          <TableColumn fx:id="courseIdTableColumn" prefWidth="75.0" text="course Id" />
+          <TableColumn fx:id="courseTitleTableColumn" prefWidth="75.0" text="course title" />
+            <TableColumn fx:id="noOfCreditsTableColumn" prefWidth="99.99993896484375" text="no of Credits" />
+            <TableColumn fx:id="yearTableColumn" prefWidth="66.0" text="year" />
+            <TableColumn fx:id="semesterTableColumn" prefWidth="60.66668701171875" text="semester" />
+        </columns>
+      </TableView>
+      <Button layoutX="262.0" layoutY="147.0" mnemonicParsing="false" onAction="#filterandLoadTableButton" text="filter and load table" />
+      <Label layoutX="272.0" layoutY="182.0" text="Filter by semester" />
+      <Label layoutX="272.0" layoutY="209.0" text="filter by no of credits" />
+      <ComboBox fx:id="filterBySEmesterComboBox" layoutX="372.0" layoutY="178.0" prefHeight="25.0" prefWidth="63.0" />
+      <TextField fx:id="filterByNoOfCreditsTextField" layoutX="390.0" layoutY="205.0" prefHeight="25.0" prefWidth="48.0" />
+      <Button layoutX="275.0" layoutY="242.0" mnemonicParsing="false" onAction="#showSemesterWiseCourseOutlineButton" text="show semesterwise course outline count" />
+      <Label fx:id="showSemesterWiseCourseCountLabel" layoutX="313.0" layoutY="279.0" prefHeight="83.0" prefWidth="189.0" text="Label" />
+   </children>
+</AnchorPane>
