@@ -82,6 +82,14 @@ public class MidController
             return;
         }
 
+        // Checking for duplicate title
+        for (Article article: articleList) {
+            if (title.equals(article.getTitle())) {
+                outputLable.setText("Duplicate Title");
+                return;
+            } 
+        }
+
         Article article = new Article(title, noOfAuthors, citationStatus, publicationDate, citationType, author);
         articleList.add(article);
         outputLable.setText("Article Added succesfully");
