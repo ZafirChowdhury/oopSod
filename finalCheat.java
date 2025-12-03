@@ -26,7 +26,7 @@ public void reciveData(String text) {
 }
 
 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("scene2.fxml"));
-
+fxmlLoader.load() // Call controller after loding the fxml
 SController s = fxmlLoader.getController();
 s.reciveData(textField.getText());
 
@@ -41,7 +41,7 @@ try {
         fos = new FileOutputStream(file, true);
         oos = new AppendableObjectOutputStream(fos);
     } else {
-        fos = new FileOutputStream(file, true);
+        fos = new FileOutputStream(file);
         oos = new ObjectOutputStream(fos);
     }
 
@@ -73,27 +73,31 @@ try {
 
     } catch (EOFException eOFException) {
         System.out.println("bin file read successfully");
+} catch(Exception e) {
+    e.printStackTrace();
+    System.out.println("There was a error while reading bin file");
 }
 
 // Working code
 try {
-            file = new File("students.bin");
+    file = new File("students.bin");
 
-            if (!file.exists()) return;
+    if (!file.exists()) return;
 
-            fis = new FileInputStream(file);
-            ois = new ObjectInputStream(fis);
+    fis = new FileInputStream(file);
+    ois = new ObjectInputStream(fis);
 
-            try {
-                while (true) {
-                    Student s = (Student) ois.readObject();
-                    students.add(s);
-                }
-            } catch (EOFException e) {
-                System.out.println("End of file reached");
-                ois.close();
-            }
-
-        } catch(Exception e) {
-            e.printStackTrace();
+    try {
+        while (true) {
+            Student s = (Student) ois.readObject();
+            students.add(s);
         }
+    } catch (EOFException e) {
+        System.out.println("End of file reached");
+        ois.close();
+    }
+
+} catch(Exception e) {
+    System.out.println("There was a error while reading bin file");
+    e.printStackTrace();
+}
