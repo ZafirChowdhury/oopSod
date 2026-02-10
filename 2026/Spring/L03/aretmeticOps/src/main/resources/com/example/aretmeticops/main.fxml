@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.aretmeticops.mainController">
+   <children>
+      <TextField layoutX="129.0" layoutY="89.0" fx:id="xTextField" />
+      <TextField fx:id="yTextField" layoutX="342.0" layoutY="89.0" />
+      <Label layoutX="96.0" layoutY="93.0" text="X:" />
+      <Label layoutX="318.0" layoutY="93.0" text="Y:" />
+      <Label fx:id="outputLable" layoutX="508.0" layoutY="89.0" prefHeight="25.0" prefWidth="71.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="103.0" layoutY="150.0" mnemonicParsing="false" onAction="#addOnClick" text="Add" />
+      <Button layoutX="178.0" layoutY="150.0" mnemonicParsing="false" onAction="#subOnClick" text="Sub" />
+      <Button layoutX="258.0" layoutY="150.0" mnemonicParsing="false" onAction="#multiOnClick" text="Multi" />
+      <Button layoutX="328.0" layoutY="150.0" mnemonicParsing="false" onAction="#divOnClick" text="Div" />
+      <Label fx:id="lable" layoutX="283.0" layoutY="87.0" prefHeight="30.0" prefWidth="34.0" textFill="#0017c9">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
